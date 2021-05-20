@@ -2,7 +2,7 @@
   <div class="Nav">
       <div class="links">
       <router-link to="/" >HOME</router-link> <br> <br>
-      <router-link to="/Wins" >WINS</router-link> <br> <br>
+      <router-link to="/Wines" >WINES</router-link> <br> <br>
       <router-link to="/About" >ABOUT US</router-link> <br> <br>
       <router-link to="/Contact" >CONTACT</router-link>
       </div>

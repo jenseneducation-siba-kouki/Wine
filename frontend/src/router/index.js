@@ -4,6 +4,10 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import LogIn from '../views/LogIn'
 import Register from '../views/Register'
+import Contact from '../views/Contact'
+import Wines from '../views/Wines'
+
+
 
 Vue.use(VueRouter)
 
@@ -27,7 +31,17 @@ const routes = [
     path: '/Register',
     name: 'Register',
     component: Register
-  }
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  },
+  {
+    path: '/wines',
+    name: 'Wines',
+    component: Wines
+  },
 ]
 
 const router = new VueRouter({
