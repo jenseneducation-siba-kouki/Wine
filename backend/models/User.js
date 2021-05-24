@@ -16,7 +16,7 @@ async register(body) {
             last: body.last,
             adress: body.adress,
             age: body.age,
-            repeatPassword: body.repeatPassword,
+            repeatPassword: passwordHash,
 			password: passwordHash
 		}
 		return await dbUsers.insert(newUser)
