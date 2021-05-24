@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+        "image": "wine2",
+		"title": "Merlot",
+		"desc": "Merlot is known for its boisterous cherry fruit flavors and refined tannin texture.",
+		"price": 39
+	},
+	{
+		"id": 2,
+        "image": "wine3",
+		"title": "Airén",
+		"desc": "One of the least-known of the prolific wine grapes of the world,",
+		"price": 49
+	},
+	{
+		"id": 3,
+        "image": "wine4",
+		"title": "Tempranillo",
+		"desc": "This is Spain’s most planted and highly-prized red variety.",
+		"price": 49
+	},
+	{
+		"id": 4,
+        "image": "wine5",
+		"title": "Syrah",
+		"desc": "Syrah originated in the Northern Rhône of France and went on to become the most popular wine",
+		"price": 54
+	},
+	{
+		"id": 5,
+        "image": "wine10",
+		"title": "Garnacha",
+		"desc": "For what the grape lacks in tannin it makes up for with zingy acidity and elevated alcohol.",
+		"price": 39
+	},
+	{
+		"id": 6,
+        "image": "wine7",
+		"title": "Sauvignon",
+		"desc": "Sauvignon Blanc is being recognized as increasingly special, as it was recently identified to be the parent grape ",
+		"price": 55
+	}
+]
