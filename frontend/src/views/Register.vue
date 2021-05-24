@@ -45,6 +45,7 @@
 <script>
 import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
+import axios from "axios";
 export default {
 name:'Register',
 data(){
