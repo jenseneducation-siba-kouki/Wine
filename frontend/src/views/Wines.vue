@@ -2,23 +2,56 @@
   <div class="Wines">
         <section class="nav">
    <ShoppingCart />
+   <CartBag @click.native="show" />
+
    <NavAll />
     </section>
   <section class="head">
     <h1>Our Wines</h1>
     </section>
+
+     <section class="product">
+    <Products v-for="item in items" :key="item.id" :item="item" />
+     <Cart v-if="cartStatus" />
+
+    </section>
   </div>
 </template>
 
 <script>
+import wines from "../data/wines.json";
 import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
+import Products from "../components/Products";
+import CartBag from "../components/CartBag";
+import Cart from "../components/Cart";
+
 export default {
 name:'Wines',
+data(){
+  return {
+    items: wines,
+    cartStatus: false,
+  }
+},
 components:{
     NavAll,
     ShoppingCart,
+    Products,
+    Cart,
+    CartBag,
 
+
+},
+computed:{
+  wines(){
+      return this.$store.state.wines;
+  }
+},
+methods:{
+   show() {
+      this.cartStatus = !this.cartStatus;
+    }
 }
 }
 </script>
