@@ -9,10 +9,10 @@
        clicking the link on the left.</p>
       <form @submit.prevent="handleSubmit">
       <input type="text"
-       v-model="username" 
+       v-model="auth.username" 
        placeholder="Username" />
       <input type="password"
-       v-model="password" 
+       v-model="auth.password" 
        placeholder="Password" />
       <button>Log in</button>
     </form>
@@ -26,10 +26,36 @@ import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
 export default {
 name:'LogIn',
+data(){
+  return{
+    auth:{
+      username: "",
+      password:""
+    }
+
+  }
+
+},
 components:{
     NavAll,
     ShoppingCart,
 
+},
+methods:{
+    async handleSubmit() {
+      const response = await axios.post(
+        `${process.env.VUE_APP_API_URL}/api/login`,
+        this.cert
+      );
+      if (response.data.token) {
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${response.data.token}`;
+        sessionStorage.setItem("auth", response.data.token);
+        this.$router.push({ name: "Wines" });
+      }
+    },
+  
 }
 }
 </script>

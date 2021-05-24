@@ -8,32 +8,32 @@
       <p>Fill in the form below to create a new account.</p>
       <form @submit.prevent="handleSubmit">
       <input type="text"
-       v-model="name"
+       v-model="auth.name"
         placeholder="First Name" />
 
       <input type="text"
-       v-model="last"
+       v-model="auth.last"
         placeholder="Last Name" />
 
       <input type="text"
-       v-model="adress"
+       v-model="auth.adress"
         placeholder="Adress" />  
 
         <input type="date" 
-        v-model="age"
+        v-model="auth.age"
         id="birthday" 
         name="birthday">
 
       <input type="text"
-       v-model="username"
+       v-model="auth.username"
         placeholder="Username" />
 
       <input type="password"
-       v-model="password"
+       v-model="auth.password"
         placeholder="Password" />
 
       <input type="password"
-        v-model="repeatPassword"
+        v-model="auth.repeatPassword"
         placeholder="Confirm password"
       />
       <button>Register</button>
@@ -47,10 +47,36 @@ import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
 export default {
 name:'Register',
+data(){
+  return {
+    auth:{
+      name: "",
+      last:"",
+      adress:"",
+      age:"",
+      username:"",
+      password:"",
+      repeatPassword:""
+    }
+  }
+
+},
 components:{
     NavAll,
     ShoppingCart,
 
+},
+methods:{
+  async handleSubmit(){
+     const response = await axios.post(
+        `${process.env.VUE_APP_API_URL}/api/register`,
+        this.auth
+      );
+      if (response.data.token) {
+        sessionStorage.setItem("auth", response.data.token);
+      }
+
+  }
 }
 }
 </script>
