@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 require("dotenv").config();
 const app = express();
 const User = require('./models/User.js');
-const { verify } = require('./auth')
+const { verify } = require('./verify')
 
 const Cryptr = require('cryptr')
 const cryptr = new Cryptr(process.env.SECRET)
