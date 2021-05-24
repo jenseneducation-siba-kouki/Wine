@@ -16,6 +16,7 @@ async register(body) {
             last: body.last,
             adress: body.adress,
             age: body.age,
+			username: body.username,
             repeatPassword: passwordHash,
 			password: passwordHash
 		}
