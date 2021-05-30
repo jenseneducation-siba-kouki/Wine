@@ -6,7 +6,7 @@
     </section>
       <h1>Create A New Account</h1>
       <p>Fill in the form below to create a new account.</p>
-      <form @submit.prevent="handleSubmit">
+      <form method="get" @submit.prevent="handleSubmit">
       <input type="text"
        v-model="auth.name"
         placeholder="First Name" />
