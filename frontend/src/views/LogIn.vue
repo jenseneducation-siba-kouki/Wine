@@ -7,7 +7,7 @@
       <h1>Member Login</h1>
       <p>In order to proceed you need to login. If you are not a member you need to sign up by
        clicking the link on the left.</p>
-      <form @submit.prevent="handleSubmit">
+      <form  method="get" @submit.prevent="handleSubmit">
       <input type="text"
        v-model="auth.username" 
        placeholder="Username" />

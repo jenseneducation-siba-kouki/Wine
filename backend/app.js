@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const Datastore = require('nedb')
+const Datastore = require('nedb-promise')
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
 const app = express();
