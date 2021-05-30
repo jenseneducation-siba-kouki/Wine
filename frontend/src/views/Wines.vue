@@ -1,9 +1,7 @@
 <template>
   <div class="Wines">
         <section class="nav">
-   <ShoppingCart />
-   <CartBag @click.native="show" />
-
+   <ShoppingCart @click.native="show"/>
    <NavAll />
     </section>
   <section class="head">
@@ -23,7 +21,6 @@ import wines from "../data/wines.json";
 import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
 import Products from "../components/Products";
-import CartBag from "../components/CartBag";
 import Cart from "../components/Cart";
 
 export default {
@@ -39,8 +36,6 @@ components:{
     ShoppingCart,
     Products,
     Cart,
-    CartBag,
-
 
 },
 computed:{

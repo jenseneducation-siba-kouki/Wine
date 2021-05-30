@@ -8,7 +8,6 @@
       <!-- <h4>{{item.price}} </h4> -->
     </div>
 
-    <p>.................................</p>
     <h4 class="total">{{totalamount}}</h4>
     <img src="./../assets/graphics/arrow-up.svg" alt="arrowup" @click="increase" />
     <h5>{{item.quantity}}</h5>
@@ -47,26 +46,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.item {
+.ProductsItem{
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
   padding: 10px;
   font-size: 13px;
-  
+  font-weight: 500;
+  font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+
 }
 .cart-item {
   display: flex;
   align-items: center;
   text-align: left;
+
 }
 img{
-  height: 6px;
+  height: 9px;
   cursor: pointer;
-  margin:1px;
+  margin:4px;
   padding:1px;
 }
 h4{
-  font-size: 15px;
-}
+  font-size: 1.2rem;
+  font-weight: 500;
 
+}
+h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+h2{
+   padding-left:1rem;
+   font-weight: 500;
+   font-size: 1.6rem;
+
+}
 </style>
