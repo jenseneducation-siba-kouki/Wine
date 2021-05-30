@@ -22,15 +22,15 @@ Sibella Valley Winery</h1>
     bottling, marketing, and distribution takes place</h5>
 </div>
 <div class="white">
-<img src="../assets/wine2.jpg" class="whitee" alt="white.win">
+<img src="../assets/image-wine2.jpg" class="whitee" alt="white.win">
 <h3>OUR WINES</h3>
 </div>
 <div class="red">
-<img src="../assets/wine10.jpg" class="redd" alt="red.win">
+<img src="../assets/image-wine10.jpg" class="redd" alt="red.win">
 </div>
 
 <div class="rose">
-<img src="../assets/wine4.jpg" class="rosee" alt="rose.win">
+<img src="../assets/image-wine4.jpg" class="rosee" alt="rose.win">
 
 </div>
   </div>

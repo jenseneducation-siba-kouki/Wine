@@ -1,16 +1,14 @@
 <template>
   <div class="cart">
-    <h1>Din beställning</h1>
+    <h1>Shopping Cart</h1>
     <div class="item" v-for="item in cart" :key="item.id">
       <ProductsItem :item="item" />
     </div>
     <div class="price">
       <h2>Total</h2>
-      <p>..............................................</p>
       <h2>{{totalamount}} kr</h2>
     </div>
-    <p>inkl moms + drönarleverans</p>
-    <button @click="sendOrder">Take My Money</button>
+    <button @click="sendOrder">CHECK OUT</button>
   </div>
 </template>
 
@@ -36,7 +34,7 @@ export default {
   methods: {
     sendOrder() {
       this.$store.dispatch("sendOrder");
-      this.$router.push("/status");
+      this.$router.push("/Order");
     }
   }
 };
@@ -45,19 +43,25 @@ export default {
 <style scoped>
 .cart {
   background-color: white;
+  width:25rem;
+  border-radius: 3px;
   position: fixed;
-  top:85px;
-  left: 35px;
-  border-radius: 20px;
-    }
+  top:65px;
+  left: 50rem;
+  }
+.item{
+  margin-top:25px;
+  }
 h1 {
 text-align: center;
 margin-top:10px;
+font-weight: 500;
+font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
    }
 .price {
   display: flex;
   align-items: flex-end;
-  margin-top: 90px;
+  margin-top: 80px;
   }
 button {
   width: 90%;
@@ -81,6 +85,9 @@ h2 {
   justify-content:center;
   align-items:center;
   margin:5px;
+  padding-left:1rem;
+  font-weight: 500;
+  font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   }
   
 </style>
