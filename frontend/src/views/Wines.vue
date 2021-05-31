@@ -31,6 +31,14 @@ data(){
     cartStatus: false,
   }
 },
+async created(){
+  const res = await axios.get("http://localhost:5000/api/wines");
+  console.log(res.data)
+},
+async mounted(){
+const RESPONSE = await axios.get("http://localhost:5000/api/wines");
+this.items = RESPONSE.data
+},
 components:{
     NavAll,
     ShoppingCart,

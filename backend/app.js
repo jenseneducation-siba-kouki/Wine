@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 require("dotenv").config();
 const app = express();
 const User = require('./models/User.js');
-// const { verify } = require('./verify')
+const { verify } = require('./verify')
 
 const Cryptr = require('cryptr')
 const cryptr = new Cryptr(process.env.SECRET)
@@ -32,6 +32,12 @@ app.post('/api/login', async (request, response) => {
 	} else {
 		response.send("please try again")
 	}
+	// console.log("logged in now")
+})
+
+app.get('/api/wines', verify, async(request, response) => {
+	console.log(res.data)
+	
 })
 
 

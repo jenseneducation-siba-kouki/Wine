@@ -71,7 +71,8 @@ methods:{
   async handleSubmit(){
      const response = await axios.post(
         `${process.env.VUE_APP_API_URL}/api/register`,
-        this.auth
+        this.auth,
+        this.$router.push({ name: "Login" })
       );
       if (response.data.token) {
         sessionStorage.setItem("auth", response.data.token);
