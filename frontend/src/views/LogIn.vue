@@ -47,7 +47,7 @@ methods:{
     async handleSubmit() {
       const response = await axios.post(
         `${process.env.VUE_APP_API_URL}/api/login`,
-        this.cert
+        this.auth
       );
       if (response.data.token) {
         axios.defaults.headers.common[
