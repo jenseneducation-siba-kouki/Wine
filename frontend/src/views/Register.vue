@@ -72,7 +72,7 @@ methods:{
      const response = await axios.post(
         `${process.env.VUE_APP_API_URL}/api/register`,
         this.auth,
-        this.$router.push({ name: "Login" })
+        this.$router.push({ name: "LogIn" })
       );
       if (response.data.token) {
         sessionStorage.setItem("auth", response.data.token);

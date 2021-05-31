@@ -18,6 +18,7 @@
     </form>
     <h2>To sign up for an account</h2>
     <router-link class="link" to="/Register">Click Here</router-link>
+    
   </div>
 </template>
 

@@ -22,6 +22,8 @@ import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
 import Products from "../components/Products";
 import Cart from "../components/Cart";
+import axios from "axios";
+
 
 export default {
 name:'Wines',

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Login from '../views/Login'
+import LogIn from '../views/LogIn'
 import Register from '../views/Register'
 import Contact from '../views/Contact'
 import Wines from '../views/Wines'
@@ -23,9 +23,9 @@ const routes = [
     component: About
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: Login
+    path: '/logIn',
+    name: 'LogIn',
+    component: LogIn
   },
   {
     path: '/register',
