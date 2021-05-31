@@ -25,7 +25,7 @@
 
       </footer>
       <p>
-      &copy; {{ new Date().getFullYear() }} | Vattencentrum
+      &copy; {{ new Date().getFullYear() }} | SibElla
     </p>
     
 
