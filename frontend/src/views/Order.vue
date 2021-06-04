@@ -12,12 +12,24 @@
       <h2>Total :</h2>
       <h2>{{totalamount}} kr</h2>
     </div>
+  <div>
+    <stripe-checkout
+      ref="checkoutRef"
+      mode="payment"
+      :pk="pk_test_51IxvB6CwtypfJVpd65kbKUEHsj00vwt0UYnYRtt0bcdFwlFABNMRyHD0LZnxPlM6SDh3UjUkhwRy3hff4dp6UN2f00ElrOtsIY"
+      :success-url="successURL"
+      :cancel-url="cancelURL"
+      @loading="v => loading = v"
+    />
+    <button @click="submit">Betala!</button>
   </div>
 </template>
 
 <script>
 import ProductsItem from "./../components/ProductsItem";
 import NavAll from "@/components/NavAll.vue";
+import { StripeCheckout } from '@vue-stripe/vue-stripe';
+
 
 
 export default {
@@ -25,6 +37,15 @@ name:'Order',
 components: {
     ProductsItem,
     NavAll,
+    StripeCheckout
+  },
+  data () {
+    this.publishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
+    return {
+      loading: false,
+      successURL: this.$router.push(''),
+      cancelURL: this.$router.push(''),
+    };
   },
    computed: {
     cart() {
@@ -37,6 +58,12 @@ components: {
       });
       return totalamount;
     }
+  },
+  methods: {
+    submit () {
+      // You will be redirected to Stripe's secure checkout page
+      this.$refs.checkoutRef.redirectToCheckout();
+    },
   },
 }
 </script>
@@ -74,3 +101,4 @@ h2 {
   font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   }
 </style>
+
