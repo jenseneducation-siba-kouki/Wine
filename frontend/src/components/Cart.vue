@@ -4,6 +4,7 @@
     <div class="item" v-for="item in cart" :key="item.id">
       <ProductsItem :item="item" />
     </div>
+    <hr>
     <div class="price">
       <h2>Total</h2>
       <h2>{{totalamount}} kr</h2>
@@ -52,6 +53,9 @@ export default {
 .item{
   margin-top:25px;
   }
+hr{
+  margin-top:3rem;
+  }
 h1 {
 text-align: center;
 margin-top:10px;
@@ -61,7 +65,7 @@ font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-s
 .price {
   display: flex;
   align-items: flex-end;
-  margin-top: 80px;
+  margin-top: 30px;
   }
 button {
   width: 90%;

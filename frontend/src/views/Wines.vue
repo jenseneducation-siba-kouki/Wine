@@ -22,7 +22,7 @@ import NavAll from "@/components/NavAll.vue";
 import ShoppingCart from "@/components/ShoppingCart.vue";
 import Products from "../components/Products";
 import Cart from "../components/Cart";
-import axios from "axios";
+// import axios from "axios";
 
 
 export default {
@@ -33,14 +33,14 @@ data(){
     cartStatus: false,
   }
 },
-async created(){
-  const res = await axios.get("http://localhost:5000/api/wines");
-  console.log(res.data)
-},
-async mounted(){
-const RESPONSE = await axios.get("http://localhost:5000/api/wines");
-this.items = RESPONSE.data
-},
+// async created(){
+//   const res = await axios.get("http://localhost:5000/api/wines");
+//   console.log(res.data)
+// },
+// async mounted(){
+// const RESPONSE = await axios.get("http://localhost:5000/api/wines");
+// this.items = RESPONSE.data
+// },
 components:{
     NavAll,
     ShoppingCart,
