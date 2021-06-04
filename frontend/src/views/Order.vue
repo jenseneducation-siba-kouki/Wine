@@ -3,7 +3,7 @@
     <stripe-checkout
       ref="checkoutRef"
       mode="payment"
-      :pk="publishableKey"
+      :pk="pk_test_51IxvB6CwtypfJVpd65kbKUEHsj00vwt0UYnYRtt0bcdFwlFABNMRyHD0LZnxPlM6SDh3UjUkhwRy3hff4dp6UN2f00ElrOtsIY"
       :success-url="successURL"
       :cancel-url="cancelURL"
       @loading="v => loading = v"
@@ -19,7 +19,7 @@ export default {
     StripeCheckout,
   },
   data () {
-    this.publishableKey = process.env.pk_test_51IxvB6CwtypfJVpd65kbKUEHsj00vwt0UYnYRtt0bcdFwlFABNMRyHD0LZnxPlM6SDh3UjUkhwRy3hff4dp6UN2f00ElrOtsIY;
+    this.publishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
     return {
       loading: false,
       successURL: this.$router.push(''),
@@ -35,5 +35,5 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped >
 </style>
