@@ -23,6 +23,8 @@
     />
     <button @click="submit">Betala!</button>
   </div>
+    </div>
+
 </template>
 
 <script>
