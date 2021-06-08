@@ -14,7 +14,8 @@
     </div>
   <div>
   <StripeElementCard />
-    
+        </div>
+
     </div>
 
 </template>
@@ -33,6 +34,18 @@ components: {
     ProductsItem,
     NavAll,
     StripeElementCard
+  },
+  computed: {
+    cart() {
+      return this.$store.state.cart;
+    },
+    totalamount() {
+      let totalamount = 0;
+      this.$store.state.cart.forEach(item => {
+        totalamount += item.quantity * item.price;
+      });
+      return totalamount;
+    }
   },
 }
 </script>

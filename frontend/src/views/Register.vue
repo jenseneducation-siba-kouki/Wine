@@ -19,10 +19,11 @@
        v-model="auth.adress"
         placeholder="Adress" />  
 
-        <input type="date" 
+        <input type="number" 
         v-model="auth.age"
-        id="birthday" 
-        name="birthday">
+        id="age" 
+        name="age"
+        min="20">
 
       <input type="text"
        v-model="auth.username"
