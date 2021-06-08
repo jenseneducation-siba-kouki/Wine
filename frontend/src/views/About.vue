@@ -74,7 +74,7 @@ components:{
   background-size:cover;
   height: 36.4rem;
   width:65rem ;
-  margin-top:-28rem;
+  margin-top:-29rem;
   margin-left:13.9rem;
 }
 h1{

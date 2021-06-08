@@ -3,15 +3,13 @@
     <div class="item">
       <h2>
         {{item.title}}
-        <span class="dots"></span>
       </h2>
-      <!-- <h4>{{item.price}} </h4> -->
     </div>
-
-    <h4 class="total">{{totalamount}}</h4>
+    <!-- <h4 class="total">{{totalamount}}</h4> -->
     <img src="./../assets/graphics/arrow-up.svg" alt="arrowup" @click="increase" />
     <h5>{{item.quantity}}</h5>
     <img src="./../assets/graphics/arrow-down.svg" alt="arrowdown" @click="decrease" />
+    <h4 class="total">{{totalamount}}</h4>
   </div>
 </template>
 
@@ -48,12 +46,11 @@ export default {
 <style lang="scss" scoped>
 .ProductsItem{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   font-size: 13px;
   font-weight: 500;
   font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
-
 }
 .cart-item {
   display: flex;
@@ -64,17 +61,21 @@ export default {
 img{
   height: 9px;
   cursor: pointer;
-  margin:4px;
+  margin:14px;
   padding:1px;
+  // margin-top:0.2rem;
+
 }
 h4{
   font-size: 1.2rem;
   font-weight: 500;
-
+  margin-top:0.2rem;
 }
 h5{
     font-size: 1.2rem;
     font-weight: 500;
+    margin-top:0.2rem;
+
 }
 h2{
    padding-left:1rem;

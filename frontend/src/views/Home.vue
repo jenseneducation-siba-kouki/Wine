@@ -72,9 +72,11 @@ h1{
   font-size: 36px;
   line-height: 1.166;
   margin-bottom: 20px;
+  color: #4c3a27;
+
 }
 h2{
-  color: rgb(165, 137, 101);
+  color: #4c3a27;
   font-family: "LegacySerITC-Book", "Playfair Display", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
   font-size: 36px;
   line-height: 1.166;
@@ -91,7 +93,7 @@ h5{
   font-family: "LegacySerITC-Book", "Playfair Display", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
 }
 p{
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: "LegacySerITC-Book", "Playfair Display", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
 }
@@ -101,7 +103,7 @@ p{
 }
 h3{
   float: right;
-  color: rgb(165, 137, 101);
+  color: #4c3a27;
   font-family: "LegacySerITC-Book", "Playfair Display", "Times New Roman", "Times", "Baskerville", "Georgia", serif;
   font-size: 30px;
   margin-right:15rem;

@@ -40,7 +40,6 @@ export default {
 .plus{
   width: 15px;
   float: right;
-
 }
 .Products {
 display: flex;
@@ -53,16 +52,16 @@ button {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 1.5rem;
-  width: 1.5rem;
-  margin-top:10.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  margin-top:11rem;
   }
  .itemtitle{
    margin-top:10rem;
    padding:10px;
  }
  .itemdesc{
-   margin-top:10rem;
+   margin-top:10.4rem;
    padding:10px;
  }
  .itemprice{

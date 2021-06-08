@@ -54,7 +54,7 @@ export default {
   margin-top:25px;
   }
 hr{
-  margin-top:3rem;
+  margin-top:2rem;
   }
 h1 {
 text-align: center;
@@ -66,6 +66,7 @@ font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-s
   display: flex;
   align-items: flex-end;
   margin-top: 30px;
+  float: right;
   }
 button {
   width: 90%;
