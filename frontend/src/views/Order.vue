@@ -47,7 +47,7 @@ components: {
 
 <style scoped>
 .Order{
-  height: 60rem;
+  height: 90rem;
   background-color: rgb(243, 239, 234);
 }
 h1{
@@ -58,15 +58,20 @@ h1{
   font-weight: 500;
 }
 .item{
+  float: right;
+  width: 25rem;
   margin-left:15.5rem;
   margin-top:3rem;
   color: #4c3a27;
 }
 .price{
-  margin-left:15.7rem;
+  margin-left:30rem;
+  /* margin-left:15.7rem; */
   color: #4c3a27;
   display: flex;
   align-items: flex-end;
+  float:right;
+  margin-top:5rem;
 }
 h2 {
   display:flex;

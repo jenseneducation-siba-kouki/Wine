@@ -56,15 +56,15 @@
               reset
             </button>
     
-            <button @click="sendOrder" @click.prevent="submitFormToCreateToken()">
+            <!-- <button @click="sendOrder" @click.prevent="submitFormToCreateToken()">
               Pay
-          
+             </button> -->
 
             <button class="uk-button uk-button-large 
             uk-button-primary
             uk-button-default uk-width-1-1
-           "  @click.prevent="submitFormToCreateToken()">
-              Betala
+           " @click="sendOrder" @click.prevent="submitFormToCreateToken()">
+              Pay
             </button>
           </div>
 
@@ -247,7 +247,7 @@ button.uk-button-primary {
   color: rgb(15, 15, 15);
   margin:3px;
   padding:3px;
-  background-color: #14b52c
+  background-color: rgb(243, 239, 234);
 
 }
 
