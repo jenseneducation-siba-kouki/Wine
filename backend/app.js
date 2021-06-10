@@ -5,7 +5,8 @@ const jwt = require('jsonwebtoken');
 require("dotenv").config();
 const app = express();
 const User = require('./models/User.js');
-const { verify } = require('./verify')
+const { generateOrderNr, generateETA } = require('./utils/utils');
+const uuid = require('uuid-random');
 
 const Cryptr = require('cryptr')
 const cryptr = new Cryptr(process.env.SECRET)
@@ -35,11 +36,24 @@ app.post('/api/login', async (request, response) => {
 	// console.log("logged in now")
 })
 
-app.get('/api/wines', verify, async(request, response) => {
-	console.log(res.data)
-	
-})
 
+app.post('/order', async (req, res) => {
+    const order = {
+        eta: generateETA(),
+        orderNr: generateOrderNr(),
+    }
+
+    setTimeout(() => {
+        res.send(order);
+    }, 2000);
+});
+  
+app.get('/key', (req, res) => {
+    const key = {
+        key: uuid()
+    }
+    res.send(JSON.stringify(key));
+})
 
 
 

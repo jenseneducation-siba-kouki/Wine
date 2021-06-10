@@ -1,9 +1,7 @@
 <template>
   <div class="ShoppingCart">
           <div class="number">{{numberOfOrders}}</div>
-   <!-- <button> -->
-   <img src="../assets/shopping.cart.png" alt="">
-   <!-- </button> -->
+   <img src="../assets/shopping.cart.png" alt="shopping">
   <router-link to='/LogIn'>Log in</router-link>
 
   </div>
@@ -41,8 +39,6 @@ a{
   padding-top:2.3rem;
   margin-right:2rem;
   text-decoration: none;
-  /* font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif; */
-
 }
 img{
 float: right;
@@ -50,19 +46,6 @@ height: 2rem;
 margin-top:1.6rem;
 margin-right:4rem;
 }
-/* button {
-  height: 40px;
-  width: 40px;
-  background-color: black;
-  border-radius: 40px;
-  border: none;
-  margin-top:-35px;
-  margin-right:30px;
-  float:right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 .number{
     width: 23px;
     height: 23px;

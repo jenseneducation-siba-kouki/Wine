@@ -29,6 +29,5 @@ a{
   font-weight: 550;
   text-decoration: none;
   line-height: 1.6;
-  /* font-family: "LegacySanITC-Book", "Arial", "Helvetica Neue", "Helvetica", sans-serif; */
 }
 </style>

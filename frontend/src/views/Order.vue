@@ -1,7 +1,6 @@
 <template>
   <div class="Order">
      <section class="nav">
-  <!-- <ShoppingCart /> -->
    <NavAll />
     </section>
       <h1>Check Out</h1>
@@ -24,10 +23,6 @@
 import ProductsItem from "./../components/ProductsItem";
 import NavAll from "@/components/NavAll.vue";
 import StripeElementCard from '@/components/StripeElementCard.vue'
-
-
-
-
 export default {
 name:'Order',
 components: {

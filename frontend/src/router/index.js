@@ -7,7 +7,7 @@ import Register from '../views/Register'
 import Contact from '../views/Contact'
 import Wines from '../views/Wines'
 import Order from '../views/Order'
-
+import Status from '../views/Status'
 
 Vue.use(VueRouter)
 
@@ -46,6 +46,11 @@ const routes = [
     path: '/order',
     name: 'Order',
     component: Order
+  },
+  {
+    path: '/Status',
+    name: 'Status',
+    component: Status
   },
 ]
 

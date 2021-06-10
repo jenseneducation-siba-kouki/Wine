@@ -47,8 +47,8 @@
             <button  @click.prevent="reset()">
               reset
             </button>
-
-            <button  @click.prevent="submitFormToCreateToken()">
+    
+            <button @click="sendOrder" @click.prevent="submitFormToCreateToken()">
               Pay
             </button>
           </div>
@@ -93,6 +93,10 @@ export default {
   },
 
   methods: {
+    sendOrder() {
+      this.$store.dispatch("sendOrder");
+      this.$router.push("/Status");
+    },
     setUpStripe() {
         if (window.Stripe === undefined) {
           alert('Stripe V3 library not loaded!');

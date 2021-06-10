@@ -63,9 +63,8 @@ components:{
 
 <style scoped>
 .About{
-  height: 167.1rem;
+  height: 173rem;
   background-color: rgb(243, 239, 234);
-
 }
 .head{
   background-image: url(../assets/about.jpg);

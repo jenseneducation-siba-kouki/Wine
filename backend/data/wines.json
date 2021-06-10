@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+        "image": "wine2",
+		"title": "Merlot",
+		"desc": "Merlot is known for its boisterous cherry fruit flavors and refined tannin texture.",
+		"price": 390
+	},
+	{
+		"id": 2,
+        "image": "wine3",
+		"title": "Airén",
+		"desc": "One of the least-known of the prolific wine grapes of the world.",
+		"price": 450
+	},
+	{
+		"id": 3,
+        "image": "wine4",
+		"title": "Tempranillo",
+		"desc": "This is Spain’s most planted and highly-prized red variety.",
+		"price": 430
+	},
+	{
+		"id": 4,
+        "image": "wine7",
+		"title": "Sauvignon",
+		"desc": "Sauvignon Blanc is being recognized as increasingly special.",
+		"price": 750
+	}
+]

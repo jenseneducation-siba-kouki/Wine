@@ -57,14 +57,13 @@ methods:{
         this.$router.push({ name: "Wines" });
       }
     },
-  
-}
+  }
 }
 </script>
 
 <style scoped>
 .LogIn{
-  height: 50rem;
+  height: 60rem;
   background-color: rgb(243, 239, 234);
 }
 h1{
@@ -82,7 +81,7 @@ p{
 }
 h2{
   margin-left:17rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   color: #4c3a27;
 }
 form {
@@ -95,12 +94,6 @@ a{
   text-decoration: none;
   color: #4c3a27;
 }
-/* .link{
- border: 1px solid #eee;
- padding-top:2rem;
-
-} */
-
 input {
   height: 3.1rem;
   width: 100%;
@@ -116,6 +109,4 @@ input {
     background-color: white;
     border: 1px solid rgb(221, 191, 170);
   }
-
-
 </style>

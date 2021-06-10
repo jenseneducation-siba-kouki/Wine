@@ -29,7 +29,6 @@ export default {
   }
 };
 </script>
-//  this.$store.dispatch.additemTocart, { item: this.item, quantity: 1 };
 
 <style scoped>
 .wine{

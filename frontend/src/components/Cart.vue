@@ -34,7 +34,6 @@ export default {
   },
   methods: {
     sendOrder() {
-      this.$store.dispatch("sendOrder");
       this.$router.push("/Order");
     }
   }

@@ -45,7 +45,6 @@ name:"Home",
 components:{
     Nav,
     ShoppingCart,
-
 }
 }
 </script>
@@ -61,7 +60,6 @@ components:{
   background-size:cover;
   height: 38rem;
 }
-
 .main{
   padding: 5rem;
   text-align: center;
@@ -127,9 +125,5 @@ h3{
   padding:2rem;
   margin-left:12rem;
   margin-top:-15rem;
-
-
 }
-
-
 </style>
