@@ -1,15 +1,19 @@
 <template>
-  <div>
+  
+      <div class="uk-align-center uk-margin-top uk-width-large uk-background-muted uk-box-shadow-large">
+
         <form class="uk-padding">
-          <div class="uk-margin uk-text-center">
+     <div class="uk-margin uk-text-center">
             <p class="stripeError" v-if="stripeError">
               {{stripeError}}
             </p>
           </div>
-          <div class="uk-margin uk-text-left">
+
+
+          <div class="uk-grid-small uk-text-left" uk-grid>
+          <div class="uk-width-1-2@s">
             <label class="uk-form-label" for="Card Number">
-              Card Number
-            </label>
+              Kort nummer            </label>
             <div class="uk-form-controls">
               <div id="card-number" class="uk-input" :class="{ 'uk-form-danger': cardNumberError }"></div>
               <span class="help-block" v-if="cardNumberError">
@@ -17,11 +21,12 @@
                             </span>
             </div>
           </div>
-
+          </div>
+<br>
           <div class="uk-grid-small uk-text-left" uk-grid>
             <div class="uk-width-1-2@s">
               <label class="uk-form-label" for="Card CVC">
-                Card CVC
+               CVC
               </label>
               <div class="uk-form-controls">
                 <div id="card-cvc" class="uk-input" :class="{ 'uk-form-danger': cardCvcError }"></div>
@@ -30,9 +35,11 @@
                                 </span>
               </div>
             </div>
+            <br>
+
             <div class="uk-width-1-2@s">
               <label class="uk-form-label" for="Expiry Month">
-                Expiry
+                Datum
               </label>
               <div class="uk-form-controls">
                 <div id="card-expiry" class="uk-input" :class="{ 'uk-form-danger': cardExpiryError }"></div>
@@ -43,13 +50,18 @@
             </div>
           </div>
 
-          <div >
-            <button  @click.prevent="reset()">
+           <div class="uk-margin uk-margin-remove-bottom uk-text-right">
+            <button class="uk-button uk-button-large uk-button-default
+            uk-width-1-1"   @click.prevent="reset()">
               reset
             </button>
+          
 
-            <button  @click.prevent="submitFormToCreateToken()">
-              Pay
+            <button class="uk-button uk-button-large 
+            uk-button-primary
+            uk-button-default uk-width-1-1
+           "  @click.prevent="submitFormToCreateToken()">
+              Betala
             </button>
           </div>
 
@@ -149,15 +161,15 @@ export default {
 
         if (!this.card.number) {
           valid = false;
-          this.cardNumberError = "Card Number is required";
+          this.cardNumberError = "Kort nummer är obligatoriskt";
         }
         if (!this.card.cvc) {
           valid = false;
-          this.cardCvcError = "CVC is required";
+          this.cardCvcError = "CVC är obligatoriskt";
         }
         if (!this.card.expiry) {
           valid = false;
-          this.cardExpiryError = "Month is required";
+          this.cardExpiryError = "Datum är obligatoriskt";
         }
         if (this.stripeError) {
           valid = false;
@@ -208,27 +220,31 @@ export default {
 </script>
 
 <style scoped>
-
 .help-block {
   color: red;
-  font-size: 13px;
+  font-size: 15px;
 }
 
-form {
+/* form {
   border-width: 2px;
   border-style: solid;
-  border-color: black;
-}
+  
+} */
 
 label.uk-form-label {
   color: black;
+  font-size: 18px;
 }
 
 button.uk-button-primary {
-  color: black;
-  font-weight: bold;
-  background-color: #5d6369
+  color: rgb(15, 15, 15);
+  margin:3px;
+  padding:3px;
+  background-color: #14b52c
+
 }
+
+
 
 #card-number,
 #card-cvc,
@@ -240,5 +256,6 @@ button.uk-button-primary {
   color: red;
   font-style: italic;
 }
+
 
 </style>
