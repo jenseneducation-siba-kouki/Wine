@@ -9,7 +9,7 @@
           <h3>Phone: 08-568 492 41</h3> <br>
       </section>
       <section class="website">
-        <h3>Connect</h3>
+        <h3>Contact</h3>
         <h3>sibella.se</h3>
         <h3>info@sibella.se</h3> <br>
       </section>
