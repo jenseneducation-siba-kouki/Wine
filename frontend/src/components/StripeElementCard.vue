@@ -1,8 +1,8 @@
 <template>
   
-      <div class="uk-align-center uk-margin-top uk-width-large uk-background-muted uk-box-shadow-large">
+      <div class="uk-align-center uk-margin-top uk-width-large uk-background-muted uk-box-shadow-large" id="wrapper">
 
-        <form class="uk-padding">
+        <form class="uk-padding" >
      <div class="uk-margin uk-text-center">
             <p class="stripeError" v-if="stripeError">
               {{stripeError}}
@@ -215,6 +215,9 @@ export default {
 </script>
 
 <style scoped>
+#wrapper{
+  margin-left:850px;
+}
 .help-block {
   color: red;
   font-size: 13px;
