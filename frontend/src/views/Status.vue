@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .Status{
-height: 30rem;
+height: 50rem;
 background-color: rgb(243, 239, 234);
 text-align: center;
 }

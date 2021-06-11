@@ -52,7 +52,7 @@ components: {
 }
 h1{
   margin-left:17rem;
-  margin-top:-14rem;
+  margin-top:-17rem;
   font-size: 3rem;
   color: #4c3a27;
   font-weight: 500;
@@ -66,7 +66,7 @@ h1{
 }
 .price{
   /* margin-left:30rem; */
-  margin-left:28rem;
+  margin-left:26rem;
   color: #4c3a27;
   display: flex;
   align-items: flex-end;

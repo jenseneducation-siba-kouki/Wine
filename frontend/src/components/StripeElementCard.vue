@@ -55,7 +55,7 @@
             </button>
           
 
-            <button class="uk-button uk-button-small uk-button-primary"  @click.prevent="submitFormToCreateToken()">
+            <button @click="sendOrder" class="uk-button uk-button-small uk-button-primary"  @click.prevent="submitFormToCreateToken()">
               Pay
             </button>
           </div>
@@ -100,6 +100,10 @@ export default {
   },
 
   methods: {
+     sendOrder() {
+      this.$store.dispatch("sendOrder");
+      this.$router.push("/status");
+    },
     setUpStripe() {
         if (window.Stripe === undefined) {
           alert('Stripe V3 library not loaded!');
@@ -216,7 +220,8 @@ export default {
 
 <style scoped>
 #wrapper{
-  margin-left:850px;
+  margin-left:800px;
+  margin-bottom:80rem;
 }
 .help-block {
   color: red;
