@@ -10,10 +10,10 @@
           </div>
 
 
-          <div class="uk-grid-small uk-text-left" uk-grid>
-          <div class="uk-width-1-2@s">
+          <div class="uk-margin uk-text-left">
             <label class="uk-form-label" for="Card Number">
-              Kort nummer            </label>
+              Card Number
+            </label>
             <div class="uk-form-controls">
               <div id="card-number" class="uk-input" :class="{ 'uk-form-danger': cardNumberError }"></div>
               <span class="help-block" v-if="cardNumberError">
@@ -21,12 +21,11 @@
                             </span>
             </div>
           </div>
-          </div>
 <br>
           <div class="uk-grid-small uk-text-left" uk-grid>
             <div class="uk-width-1-2@s">
               <label class="uk-form-label" for="Card CVC">
-               CVC
+                Card CVC
               </label>
               <div class="uk-form-controls">
                 <div id="card-cvc" class="uk-input" :class="{ 'uk-form-danger': cardCvcError }"></div>
@@ -39,7 +38,7 @@
 
             <div class="uk-width-1-2@s">
               <label class="uk-form-label" for="Expiry Month">
-                Datum
+                Expiry
               </label>
               <div class="uk-form-controls">
                 <div id="card-expiry" class="uk-input" :class="{ 'uk-form-danger': cardExpiryError }"></div>
@@ -51,19 +50,12 @@
           </div>
 
            <div class="uk-margin uk-margin-remove-bottom uk-text-right">
-            <button class="uk-button uk-button-large uk-button-default
-            uk-width-1-1"   @click.prevent="reset()">
+            <button class="uk-button uk-button-small uk-button-default"   @click.prevent="reset()">
               reset
             </button>
-    
-            <!-- <button @click="sendOrder" @click.prevent="submitFormToCreateToken()">
-              Pay
-             </button> -->
+          
 
-            <button class="uk-button uk-button-large 
-            uk-button-primary
-            uk-button-default uk-width-1-1
-           " @click="sendOrder" @click.prevent="submitFormToCreateToken()">
+            <button class="uk-button uk-button-small uk-button-primary"  @click.prevent="submitFormToCreateToken()">
               Pay
             </button>
           </div>
@@ -108,10 +100,6 @@ export default {
   },
 
   methods: {
-    sendOrder() {
-      this.$store.dispatch("sendOrder");
-      this.$router.push("/Status");
-    },
     setUpStripe() {
         if (window.Stripe === undefined) {
           alert('Stripe V3 library not loaded!');
@@ -168,15 +156,15 @@ export default {
 
         if (!this.card.number) {
           valid = false;
-          this.cardNumberError = "Kort nummer är obligatoriskt";
+          this.cardNumberError = "Card Number is required";
         }
         if (!this.card.cvc) {
           valid = false;
-          this.cardCvcError = "CVC är obligatoriskt";
+          this.cardCvcError = "CVC is required";
         }
         if (!this.card.expiry) {
           valid = false;
-          this.cardExpiryError = "Datum är obligatoriskt";
+          this.cardExpiryError = "Month is required";
         }
         if (this.stripeError) {
           valid = false;
@@ -229,14 +217,14 @@ export default {
 <style scoped>
 .help-block {
   color: red;
-  font-size: 15px;
+  font-size: 13px;
 }
 
-/* form {
+form {
   border-width: 2px;
   border-style: solid;
-  
-} */
+  border-color: rgb(93, 93, 92);
+}
 
 label.uk-form-label {
   color: black;
@@ -244,13 +232,14 @@ label.uk-form-label {
 }
 
 button.uk-button-primary {
-  color: rgb(15, 15, 15);
-  margin:3px;
-  padding:3px;
-  background-color: rgb(243, 239, 234);
+  color: rgb(14, 14, 13);
+  font-weight: bold;
+  background-color: #2ab53f
 
 }
-
+button.uk-button-primary:active {
+  background-color: #93c486;
+}
 
 
 #card-number,
