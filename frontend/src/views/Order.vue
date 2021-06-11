@@ -58,20 +58,20 @@ h1{
   font-weight: 500;
 }
 .item{
-  float: right;
+  /* float: right; */
   width: 25rem;
   margin-left:15.5rem;
   margin-top:3rem;
   color: #4c3a27;
 }
 .price{
-  margin-left:30rem;
-  /* margin-left:15.7rem; */
+  /* margin-left:30rem; */
+  margin-left:28rem;
   color: #4c3a27;
   display: flex;
   align-items: flex-end;
-  float:right;
-  margin-top:5rem;
+  /* float:right; */
+  margin-top:4rem;
 }
 h2 {
   display:flex;
